@@ -22,6 +22,7 @@ public class BasicOperators {
         if (score >= 80) return 'B';
         if (score >= 70) return 'C';
         if (score >= 60) return 'D';
+        if (score >= 50) return 'E';
         return 'F';
     }
 
@@ -39,11 +40,11 @@ public class BasicOperators {
     }
 
     public static int[] countdown(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("n must be non-negative");
+        if (n <= 0) {
+            throw new IllegalArgumentException("n must be positive");
         }
-        int[] result = new int[n + 1];
-        for (int i = 0; i <= n; i++) {
+        int[] result = new int[n];
+        for (int i = 0; i < n; i++) {
             result[i] = n - i;
         }
         return result;
