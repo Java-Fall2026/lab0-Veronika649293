@@ -27,7 +27,7 @@ public class BasicOperators {
      * Обчислення факторіалу (n!).
      */
     public static long factorial(int n) {
-        if (n < 0 || n > 20) {
+        if (n < 0 || n > 20) { 
             throw new IllegalArgumentException("Параметр n має бути в межах від 0 до 20");
         }
         long result = 1;
